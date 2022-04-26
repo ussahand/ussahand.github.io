@@ -1,33 +1,158 @@
-<html>
-    <head>
-        <title>Hello World</title>
-        <style>
-            :root{ box-sizing: border-box;}
-            body{
-                display: flex;
-                flex-direction: column;
-            }
-            #box1{
-                width: 150px;
-                height: 100px;
-                background-color: aqua;
-            }
-            #box2{
-                width: 150px;
-                background-color: magenta;
-            }
-            img{
-                height: 100px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id = "box1"></div>
-        <div id = "box2"></div>
-        <img src="https://ussahand.github.io/svg/twitter.svg" />
-        <img src="https://ussahand.github.io/svg/codepen.svg" />
-        <img src="https://ussahand.github.io/svg/github.svg" />
-        <img src="https://ussahand.github.io/svg/linkedin.svg" />
-        <img src="https://ussahand.github.io/svg/fcc.svg" />
-    </body>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC:Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html id="htm">
+  <head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lobster&family=League+Spartan&family=Roboto&family=Berkshire+Swash&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <title>FreeCodeCamp Personal Portfolio Webpage</title>   
+  </head>
+
+  <body>
+    <nav class="menu-wrapper" >
+      <ul id="navbar">
+        <li class="logo">
+          <p> S<sup>ahand</sup>P<sub>roject</sub> </p>
+        </li>
+        <li>  <a href="#about"> ? </a> </li>
+        <li>  <a href="#prj1"> Projects </a>  </li>
+        <li>  <a href="#certificates"> Certificates </a> </li>
+        <li>  <a href="#contact"> Contacts </a> </li>
+      </ul>
+    </nav>
+    
+    <main class="contents-slider">
+      <div id="contentBox" class="contents">
+
+        <section id="welcome-section" style="height: 100vh;" >
+          <div id="info" >
+            <span>
+              <h1 > Sahand Vand </h1>
+              <h5>Full Stack Developer</h5>
+              <h5>SQL Server Develope</h5>
+            </span>
+            </div>
+        </section>
+
+        <section >
+          <div id="about" >
+            <span>
+              <h1 > About Me. </h1>
+              <p>I am Sahand and I have working as a deverloper for about 20 years. I atart with MS DOS and Assembly language.
+                <br>
+              I designed and developed hundreds of application with c and C++. Also I am a DBA and managed different data base server on virtual machines.<br>
+              As a DBA admin I developed TSQL scripts in MS SQL server.<br>
+              with the mentioned experience I design and develope application with react and react native.<p>
+            </span>
+            </div>
+        </section>
+
+        <section id="projects"> 
+          <div class="project-tile" id="prj1">
+            <div class="wrap">
+            <h2> Responsive Portfolio</h2>
+            <p class="codepen" data-height="400" data-default-tab="result" data-slug-hash="jOYxdBq" data-user="sahandprojects" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/sahandprojects/pen/jOYxdBq">
+                FCC:Portfolio</a> by sahand (<a href="https://codepen.io/sahandprojects">@sahandprojects</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <a target="_blank" href="https://ussahand.github.io/"> See This Profile in the github</a>
+            </div> <!-- end of wrap -->
+          </div> 
+         
+          <div class="project-tile" id="prj2">
+            <div class="wrap">
+            <h2> Responsive Catering App</h2>
+            <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="wvpjQzJ" data-user="sahandprojects" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/sahandprojects/pen/wvpjQzJ">
+                FCC:Product Landing</a> by sahand (<a href="https://codepen.io/sahandprojects">@sahandprojects</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div> <!-- end of wrap -->
+          </div>
+          
+          <div class="project-tile" id="prj3">
+            <div class="wrap">
+            <h2>HTML + CSS C Language Overview</h2>
+            <p class="codepen" data-height="400" data-default-tab="result" data-slug-hash="xxpjjyd" data-user="sahandprojects" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/sahandprojects/pen/xxpjjyd">
+                FCC:TeckDoc</a> by sahand (<a href="https://codepen.io/sahandprojects">@sahandprojects</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div> <!-- end of wrap -->
+          </div>
+          
+        </section> <!-- end of projects -->
+
+        <section > 
+          <div class="certificates" id="certificates">
+            <h1>My recent Certificates:</h1>
+            <a target="_blank" href="https://www.freecodecamp.org/certification/fccd9793818-f6d8-4822-b4d7-c08e8ab0a390/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a>
+  
+            <a target="_blank" href="https://www.freecodecamp.org/certification/fccd9793818-f6d8-4822-b4d7-c08e8ab0a390/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a>
+          </div>
+        </section>
+
+        <section class="contact" > 
+          <div id="contact">
+            <form action="mailto:sahandprojects@gmail.com" method="POST" enctype="multipart/form-data" >
+              <h1>Let’s talk.</h1>
+              <p>New projects, freelance inquiry or even a coffee.</p>
+              
+              <label for="name">Name</label>
+              <input id="name" type="text" required>
+
+              <label for="email">E-mail</label>
+              <input id="email" type="email">
+
+              <label for="message">Message</label>
+              <textarea id="message" required placeholder="Enter your comment here."></textarea>
+
+              <label for="send">Submit</label>
+              <input id="send" type="submit" value="Send Message">
+            </form>
+           </div>
+        </section>
+
+      </div> <!-- end of content box -->
+      
+      <!-- social stripe -->
+      <div class="social-stripe">
+        <a target="_blank" href="https:///ussahand.github.io"> <img src="https://ussahand.github.io/svg/github.svg" /> </a>
+        <a target="_blank" href="https://codepen.io/sahandprojects"> <img src="https://ussahand.github.io/svg/codepen.svg" /> </a>
+        <a id="profile-link" target="_blank" href="https://www.freecodecamp.org/fccd9793818-f6d8-4822-b4d7-c08e8ab0a390"> <img src="https://ussahand.github.io/svg/fcc.svg" /> </a>
+        <a target="_blank" href=""> <img src="https://ussahand.github.io/svg/linkedin.svg" /> </a>
+        <a target="_blank" href=""> <img src="https://ussahand.github.io/svg/twitter.svg" /> </a>
+      </div>
+
+      <!-- start of scroller -->
+      <div id="sliderBox" class="slider-box">  
+        <!--     <input id="slider" class="slider" orient="1" type="range" min=1 max=5 value = 0 /> -->
+        <div id="slid" class="slid"> 
+
+          <span id = slidValue> 1 </span>  
+
+          <p class= "knob" id="knob">
+            <strong> <sup id="numerator"> 1 </sup> / <sub id="denominator"> 2 </sub>  </strong>
+          </p> <!-- end of scroller knob -->
+        </div> <!-- scrol bar -->
+      </div> <!-- end of scroll box -->
+
+    </main>
+  </body> 
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
 </html>

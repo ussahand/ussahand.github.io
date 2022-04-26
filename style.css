@@ -1,0 +1,214 @@
+html{
+  box-sizing: border-box;
+  /* default font size is 16px*/
+}
+:root{
+  --nav-height: 3.7 rem;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  overflow: hidden;
+  background: #1c1d25;
+  font-family: Roboto;
+  color: #b0b2c3;
+  border: 1px solid black;
+}
+/********** Menu ************/
+nav {
+  height: 3.7rem; /*This preserve space, so next element will start after the menu*/
+}
+ul {
+  display: flex;
+  position: fixed;
+  justify-content: end;
+  width: 100%;
+  font-family: "League Spartan",Helvetica,Arial,sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  transition: color 0.35s ease;
+}
+nav ul li.logo{
+  flex: 1 0 auto;
+  font-size: 1.2em;
+  color: #2979FF !important;
+}
+nav ul li{
+  list-style: none;
+  padding: 0.5rem ;
+}
+li{
+  color: yellow;
+}
+nav a{text-decoration: none;}
+a{ 
+  
+  color: #b0b2c3;
+  opacity: 0.7;
+}
+a:hover{
+  color: white;
+  opacity: 1;
+}
+
+/*********** contents ************/
+.contents-slider{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 3.7rem ); /*100vh - navbar*/
+}
+
+.contents{
+  flex: 1 1 auto; /* 50px for slider and rest for contents */
+  overflow: hidden;
+}
+
+.contents > div, .contents > section > div{
+  height: calc(100vh - 3.7rem - 35px ); /* 100vh - nav - stripe*/
+  width: 100%; /* because it's inline block*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media( orientation : landscape){
+  .contents > div, .contents > section > div{
+    height: calc(100vh - 3.7rem) ;/*100vh - navbar */
+  }
+}
+
+#welcome-section{
+  color: #2979FF;
+}
+#about{color:white;}
+#about p{
+  text-align: justify;
+  color: #FDD835;
+}
+
+
+.project-tile > div{ 
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #2979FF;
+}
+
+#certificates {
+  color: #2979FF;
+}
+#certificates a{
+  padding: 1rem 0px;
+}
+form h1{
+  color: #2979FF;
+}
+form label{
+  display: inline-block;
+  padding-top: 1rem;
+}
+input, textarea{
+  width: 100%;
+}
+/********* social stipe *******/
+
+.social-stripe{
+  flex: 0 0 35px;
+  background-color: #1c1d25;
+  align-self: center;
+}
+.social-stripe img{
+  height: 35px;
+  width: 35px;
+  padding-top: 5px;
+  padding-left: 5px;
+  filter: invert(50%) sepia(151%) saturate(735%) hue-rotate(145deg) brightness(95%) contrast(97%);
+}
+
+/********* start scroll *******/
+.slider-box{
+  /*global variables for all children of sliderBox*/
+  --slider-back-color: #1c1d25;
+  --slider-margin: 5px;
+ 
+  --knob-shorter: 25px;
+  --knob-longer: 40px;
+  --knob-back-color: #1c1d25;
+  --knob-text-color: white;
+  
+  --bar-tickness: 1px;
+  --bar-color: gray;
+}
+
+.slider-box{
+  position: relative;
+  flex-direction: column; 
+  flex: 0 0 var( --knob-shorter ); 
+  margin: 0px var( --slider-margin );
+  background-color: var( --slider-back-color );
+  justify-content: center;
+}
+.slid{ 
+  position: absolute;
+  background: var( --bar-color );
+}
+
+#slidValue{ display: none; }
+
+.slid:hover, .knob:hover{ cursor: grab; }
+
+.slid:active, .knob:active{ cursor: grabbing; }  
+
+.knob{
+  position: absolute;
+  width: var( --knob-longer );
+  height: var( --knob-shorter );
+  text-align: center;
+  background-color: var( --knob-back-color );
+  color: var( --knob-text-color );
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media(orientation : portrait){
+  .slid{
+    height: var( --bar-tickness );
+    width: 100%;
+    top: 12px;
+  }
+  .knob{
+    top: -13px !important; /* because its updated with JS internal top and left */
+  }
+}
+
+@media(orientation : landscape){
+  .contents-slider{ flex-direction: row;  }
+  .contents{ flex-direction: row;  }
+  .slider-box{ 
+    flex-direction: row; 
+    margin: var( --slider-margin ) 0px; 
+  }
+  .slid{
+    width: var( --bar-tickness );
+    height: 100%;
+    left: 12px;
+  }
+  .knob{
+    width: var( --knob-shorter );
+    height: var(--knob-longer );
+    left: -13px !important;
+  }
+}
+
+/*********** End of scroll **************/
